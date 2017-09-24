@@ -18,6 +18,7 @@
     "toastr": "2.1.2"
   },
   "scripts": {
+    "prestart": "babel-node tools/startMessage.js",
     "start": "babel-node tools/srcServer.js"
   },
   "devDependencies": {
