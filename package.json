@@ -19,7 +19,9 @@
   },
   "scripts": {
     "prestart": "babel-node tools/startMessage.js",
-    "start": "babel-node tools/srcServer.js"
+    "start": "babel-node tools/srcServer.js",
+    "lint": "node_modules/.bin/esw webpack.config.* src tools",
+    "lint:watch": "npm run lint -- --watch"
   },
   "devDependencies": {
     "babel-cli": "6.8.0",
