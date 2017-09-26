@@ -7,14 +7,17 @@ class CoursesPage extends React.Component {
   constructor(props, context) {
     super(props, context);
 
+    // initialize state
     this.state = {
       course: { title: "" }
     };
 
+    // bind functions
     this.onTitleChange = this.onTitleChange.bind(this);
     this.onClickSave = this.onClickSave.bind(this);
   }
 
+  // Child functions called by render
   onTitleChange(event) {
     const course = this.state.course;
     course.title = event.target.value;
@@ -29,6 +32,7 @@ class CoursesPage extends React.Component {
     return <div key={index}>{course.title}</div>;
   }
 
+  // Render
   render() {
     return (
       <div>
